@@ -1,7 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <filesystem>
-#include <string>
+#include "IncludeHeaders.h"
 #include"game_setup.h"
 //#include"handshakephase.h"
 using namespace std;
@@ -12,7 +9,7 @@ int main() {
 	string username;
 	path input_directory, output_directory, temp_directory;
 	int token;
-	char ScopeX;
+	int ScopeX;
 	int ScopeY;
 
 	//pre-setup
