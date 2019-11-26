@@ -10,7 +10,11 @@ void sendCommand(int token, string command, string &content,
 		output << "TOKEN=" << token<<endl;
 	}
 	output << command<<"="<<content;
-
-	filesystem::rename(temp_directory/"Player.in", input_directory/"Player.in");
-
+	output.close();
+		try {
+			std::filesystem::rename(temp_directory / "Player.in", input_directory / "Player.in");
+		}
+		catch (std::filesystem::filesystem_error& e) {
+			std::cout << e.what() << '\n';
+		}
 }

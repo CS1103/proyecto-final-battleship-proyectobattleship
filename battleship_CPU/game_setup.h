@@ -1,10 +1,9 @@
 #include "inputtovals.h"
 using namespace std;
 using path = std::filesystem::path;
-void game_setup(string& username, path& input_directory, path& output_directory, path& temp_directory) {
+void game_setup(string &user, string& username, path& input_directory, path& output_directory, path& temp_directory) {
 
 	//cargar settings de game_settings.txt
-	string user;
 	path server_directory;
 	getSettings(user, username, server_directory);
 	//cout << server_directory;
