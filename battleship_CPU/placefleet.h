@@ -5,27 +5,27 @@
 #include "sendCommands.h"
 
 
-void placefleet(){
+void placefleet(int token, path &input_directory, path &temp_directory, path &output_directory, int scopeX, int scopeY){
 
     random_device device;
     mt19937 generator(device());
     uniform_int_distribution <int> distribution (1, 10);
+
     string message;
 
     char tipoNave;
-    int x;
-    int y;
     char orientacion;
 
-    //primera nave
+    // prueba de la primera nave
 
     tipoNave = 'A';
-    x = distribution(generator);
-    y = distribution(generator);
+    scopeX = distribution(generator);
+    scopeY = distribution(generator);
     orientacion = 'H';
 
-    sendCommand();
-
+    message = tipoNave[0] + "-" + scopeX + scopeY + "-" + orientacion[0];
+    sendCommand(token, "PLACEFLEET", message, input_directory, temp_directory);
+    
 }
 
 
