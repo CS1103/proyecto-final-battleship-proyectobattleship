@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/mauri/source/repos/utec-cs1103-2019-01/proyecto-final-battleship-proyectobattleship/battleship_CPU/out/build/x64-Debug/CMakeFiles/battleship_CPU.dir/embed.manifest"
