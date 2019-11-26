@@ -1,7 +1,10 @@
+using namespace std;
+using path = std::filesystem::path;
+
 void sendCommand(int token, string &command, string &content, 
-					string &input_directory, string &temp_directory) {
+					path &input_directory, path &temp_directory) {
 	
-	ofstream output(temp_directory / "Player.in" / ));
-	output.open("rectangulos.out");
+	ofstream output(temp_directory / "Player.in"));
+
 
 }

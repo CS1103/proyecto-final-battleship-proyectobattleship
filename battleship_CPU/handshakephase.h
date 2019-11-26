@@ -1,8 +1,9 @@
 #include "sendCommands.h"
-
+using path = std::filesystem::path;
 using namespace std;
-void handshake(string& username, string& input_directory, 
-				string& output_directory, string& temp_directory)
+
+void handshake(string& username, path& input_directory, 
+				path& output_directory, path& temp_directory)
 {
 	//step 1: send handshake command
 	sendCommand(0, "HANDSHAKE", username, input_directory, temp_directory);
