@@ -3,7 +3,7 @@
 #include <filesystem>
 #include <string>
 #include"game_setup.h"
-//#include"handshakephase.h"
+#include"handshakephase.h"
 using namespace std;
 
 using path = std::filesystem::path;
@@ -12,7 +12,7 @@ int main() {
 	string username;
 	path input_directory, output_directory, temp_directory;
 	int token;
-	char ScopeX;
+	int ScopeX;
 	int ScopeY;
 
 	//pre-setup
