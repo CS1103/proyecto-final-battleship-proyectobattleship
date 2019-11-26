@@ -9,7 +9,7 @@ void handshake(string& username, string& input_directory,
 
 	//step2: wait and check output
 	_sleep(0.5);
-	checkOutput();
+	checkOutput(output_directory, status, toke, );
 
 	//continue if true, terminate if false
 	if 
