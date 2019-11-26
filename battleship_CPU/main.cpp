@@ -1,6 +1,6 @@
 #include "IncludeHeaders.h"
 #include"game_setup.h"
-//#include"handshakephase.h"
+#include"handshakephase.h"
 using namespace std;
 
 using path = std::filesystem::path;

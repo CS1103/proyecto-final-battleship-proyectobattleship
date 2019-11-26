@@ -2,7 +2,7 @@
 using path = std::filesystem::path;
 using namespace std;
 
-void handshake(string& username, path& input_directory, 
+void handshake(int &token, int &ScopeX, int &ScopeY, string& username, path& input_directory, 
 				path& output_directory, path& temp_directory)
 {
 	//step 1: send handshake command
@@ -10,10 +10,10 @@ void handshake(string& username, path& input_directory,
 
 	//step2: wait and check output
 	_sleep(0.5);
-	checkOutput(output_directory, status, toke, );
+	//checkOutput(output_directory, status, toke, );
 
 	//continue if true, terminate if false
-	if 
+	//if 
 
 
 }
