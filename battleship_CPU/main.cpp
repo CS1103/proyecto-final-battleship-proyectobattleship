@@ -14,13 +14,14 @@ int main() {
 	int token;
 	int ScopeX;
 	int ScopeY;
+	int checkcount;
 
 	//pre-setup
 	game_setup(user, username, input_directory, output_directory, temp_directory);
 	//cout << username << endl<<input_directory << endl<<output_directory << endl<<temp_directory;
 	//program begins
 	//handshake phase
-	handshake(token, ScopeX, ScopeY, user, username, input_directory, output_directory, temp_directory);
+	handshake(token, ScopeX, ScopeY, user, username, input_directory, output_directory, temp_directory, checkcount);
 
 	//if handshake successful, begin placefleet phase
 	//placefleet();
