@@ -10,7 +10,7 @@ void checkOutput(string& command, string& status, int &token, string& message, s
 		currentfile<< "First";
 	} else { currentfile<< "Second"; }
 	currentfile << "Player" << checkcount << ".out";
-	cout << endl<<currentfile.str()<<endl<<endl;
+	cout << endl<<currentfile.str()<<endl<<endl;	
 
 	ifstream input(output_directory / currentfile.str());
 	getline(input, command);

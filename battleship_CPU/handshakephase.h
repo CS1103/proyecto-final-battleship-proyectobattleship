@@ -13,7 +13,7 @@ void handshake(int& token, int& ScopeX, int& ScopeY, string& user, string& usern
 	sendCommand(0, "HANDSHAKE", username, input_directory, temp_directory);
 
 	//step2: wait and check output
-	_sleep(0.5);
+	_sleep(10.5);
 	checkOutput(command, status, token, scope, user, output_directory, checkcount);
 		if (command == "HANDSHAKE" && status == "ACCEPTED") {
 			cout << endl << "token and scope accepted" << endl;

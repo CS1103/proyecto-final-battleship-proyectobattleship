@@ -16,7 +16,8 @@ int main() {
 
 	//pre-setup
 	game_setup(user, username, input_directory, output_directory, temp_directory);
-	//cout << username << endl<<input_directory << endl<<output_directory << endl<<temp_directory;
+	cout << "GAME SETTINGS"<< username << endl<<input_directory << endl<<output_directory << endl<<temp_directory<<endl;
+	
 	//program begins
 	//handshake 
 
