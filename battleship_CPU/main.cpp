@@ -30,6 +30,6 @@ int main() {
 	//attackuntilend();
 
 
-	clear();
-	show();
+	//clear();
+	//show();
 }
