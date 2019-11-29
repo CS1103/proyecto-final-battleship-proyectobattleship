@@ -22,11 +22,13 @@ int main() {
 	handshake(token, ScopeX, ScopeY, user, username, input_directory, output_directory, temp_directory, checkcount);
 
 	//if handshake successful, begin placefleet phase
-	placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY);
+	//placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY);
 
 	//when placefleet completes, proceed to attack phase until win, loss or tie
 
 	//attackuntilend();
 
 
+	clear();
+	show();
 }
