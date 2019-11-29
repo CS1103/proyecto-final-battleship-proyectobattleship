@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Github/proyecto-final-battleship-proyectobattleship/battleship_CPU/main.cpp" "C:/Github/proyecto-final-battleship-proyectobattleship/battleship_CPU/cmake-build-debug/CMakeFiles/battleship_CPU.dir/main.cpp.obj"
+  "C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/main.cpp" "C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/cmake-build-debug/CMakeFiles/battleship_CPU.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

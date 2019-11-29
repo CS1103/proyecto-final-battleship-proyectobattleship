@@ -25,7 +25,9 @@ void placefleet(int token, path &input_directory, path &temp_directory, path &ou
 
     message = tipoNave[0] + "-" + scopeX + scopeY + "-" + orientacion[0];
     sendCommand(token, "PLACEFLEET", message, input_directory, temp_directory);
-    
+
+
+
 }
 
 
