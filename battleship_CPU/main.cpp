@@ -1,7 +1,7 @@
 #include "IncludeHeaders.h"
 #include"game_setup.h"
 #include"handshakephase.h"
-#include "placefleet.h"
+//#include "placefleet.h"
 using namespace std;
 
 using path = std::filesystem::path;
@@ -12,17 +12,18 @@ int main() {
 	int token;
 	int ScopeX;
 	int ScopeY;
-	int checkcount;
+	int checkcount = 0;
 
 	//pre-setup
 	game_setup(user, username, input_directory, output_directory, temp_directory);
 	//cout << username << endl<<input_directory << endl<<output_directory << endl<<temp_directory;
 	//program begins
-	//handshake phase
+	//handshake 
+
 	handshake(token, ScopeX, ScopeY, user, username, input_directory, output_directory, temp_directory, checkcount);
 
 	//if handshake successful, begin placefleet phase
-	placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY);
+	//placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY);
 
 	//when placefleet completes, proceed to attack phase until win, loss or tie
 
