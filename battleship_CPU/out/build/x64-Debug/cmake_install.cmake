@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/mauri/source/repos/utec-cs1103-2019-01/proyecto-final-battleship-proyectobattleship/battleship_CPU/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/mauri/Source/Repos/utec-cs1103-2019-01/proyecto-final-battleship-proyectobattleship/battleship_CPU/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

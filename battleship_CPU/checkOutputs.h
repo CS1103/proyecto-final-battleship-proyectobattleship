@@ -1,4 +1,4 @@
-#include <sstream>;
+#include <sstream>
 #include "parseOutput.h"
 using namespace std;
 using path = std::filesystem::path;
@@ -15,7 +15,6 @@ void checkOutput(string& command, string& status, int &token, string& message, s
 	ifstream input(output_directory / currentfile.str());
 	getline(input, command);
 	//cout << command<<endl;
-
 	string cmd, msg;
 
 	do {

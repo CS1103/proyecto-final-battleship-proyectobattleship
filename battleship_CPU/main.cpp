@@ -1,10 +1,13 @@
 #include "IncludeHeaders.h"
 #include"game_setup.h"
 #include"handshakephase.h"
+#include "attackphase.h"
+#include<filesystem>
 //#include "placefleet.h"
 using namespace std;
 
 using path = std::filesystem::path;
+
 
 int main() {
 	string user, username;
@@ -28,7 +31,9 @@ int main() {
 
 	//when placefleet completes, proceed to attack phase until win, loss or tie
 
-	//attackuntilend();
+	attackuntilend(token, ScopeX, ScopeY, user, input_directory, output_directory, temp_directory, checkcount);
+
+
 
 
 	//clear();
