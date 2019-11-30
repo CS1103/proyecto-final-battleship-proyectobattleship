@@ -80,10 +80,49 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/IncludeHeaders.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attacklogic.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attackphase.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/checkOutputs.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/formatcoordinates.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/game_setup.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/handshakephase.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/inputtovals.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
 		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/main.cpp">
 			<Option target="battleship_CPU"/>
 		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseOutput.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseScope.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
 		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/placefleet.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/sendCommands.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/storeresult.h">
+			<Option target="battleship_CPU"/>
+		</Unit>
+		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/validateattack.h">
 			<Option target="battleship_CPU"/>
 		</Unit>
 		<Unit filename="C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/CMakeLists.txt">
