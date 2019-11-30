@@ -41,6 +41,61 @@ void SetShips(){
 
 
 
+/*
+ * char tipoNave;
+ * int scopex; int scopey;
+ * char orientacion;
+ *
+ * const int fil = 10;
+ * const int col = 10;
+ * int board [fil][col];
+
+    cout << "Inserte el tipo de nave que deseea: ";
+    cin >> tipoNave;
+
+    if (tipoNave != 'A' && tipoNave != 'B' && tipoNave != 'S' && tipoNave != 'T') {
+        cout << "Not in parameters " << endl;
+        exit(1);
+    }
+
+    else cout << "Message: Continue" << endl;
+
+    cout << "Ingrese eje x y eje y: ";
+    cin >> scopex >> scopey;
+
+
+
+    cout << "ingrese la orientacion: ";
+    cin >> orientacion;
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
