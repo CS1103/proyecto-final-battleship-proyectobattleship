@@ -3,10 +3,17 @@
 
 CMakeFiles/battleship_CPU.dir/main.cpp.obj
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/IncludeHeaders.h
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attacklogic.h
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attackphase.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/checkOutputs.h
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/formatcoordinates.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/game_setup.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/handshakephase.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/inputtovals.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/main.cpp
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseOutput.h
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseScope.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/placefleet.h
  C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/sendCommands.h
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/storeresult.h
+ C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/validateattack.h

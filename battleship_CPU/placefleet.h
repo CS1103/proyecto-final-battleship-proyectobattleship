@@ -30,8 +30,8 @@ void show(){
 void SetShips(){
     int s = 0; // current number of ships
     while(s < maxships){
-        int x = rand()%10;
-        int y = rand()%10;
+        int x = rand()% fila;
+        int y = rand()% columna;
         if (board[x][y] != 1){
             s++;
             board[x][y] = 1;

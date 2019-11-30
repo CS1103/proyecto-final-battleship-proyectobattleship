@@ -3,7 +3,7 @@
 #include"handshakephase.h"
 #include "attackphase.h"
 #include<filesystem>
-//#include "placefleet.h"
+#include "placefleet.h"
 using namespace std;
 
 using path = std::filesystem::path;
@@ -32,8 +32,6 @@ int main() {
 	//when placefleet completes, proceed to attack phase until win, loss or tie
 
 	attackuntilend(token, ScopeX, ScopeY, user, input_directory, output_directory, temp_directory, checkcount);
-
-
 
 
 	//clear();

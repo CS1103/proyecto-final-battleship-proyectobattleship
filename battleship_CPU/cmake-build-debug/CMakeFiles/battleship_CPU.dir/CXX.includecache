@@ -18,7 +18,35 @@ filesystem
 random
 -
 
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attacklogic.h
+vector
+-
+string
+-
+random
+-
+validateattack.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/validateattack.h
+
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attackphase.h
+formatcoordinates.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/formatcoordinates.h
+attacklogic.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attacklogic.h
+storeresult.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/storeresult.h
+vector
+-
+
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/checkOutputs.h
+sstream
+-
+parseOutput.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseOutput.h
+
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/formatcoordinates.h
+string
+-
 
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/game_setup.h
 inputtovals.h
@@ -29,6 +57,14 @@ sendCommands.h
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/sendCommands.h
 checkOutputs.h
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/checkOutputs.h
+parseScope.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseScope.h
+exception
+-
+thread
+-
+chrono
+-
 
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/inputtovals.h
 
@@ -39,8 +75,18 @@ game_setup.h
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/game_setup.h
 handshakephase.h
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/handshakephase.h
+attackphase.h
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/attackphase.h
+filesystem
+-
 placefleet.h
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/placefleet.h
+
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseOutput.h
+
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/parseScope.h
+sstream
+-
 
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/placefleet.h
 IncludeHeaders.h
@@ -49,4 +95,12 @@ sendCommands.h
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/sendCommands.h
 
 C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/sendCommands.h
+
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/storeresult.h
+vector
+-
+
+C:/GitHub/proyecto-final-battleship-proyectobattleship/battleship_CPU/validateattack.h
+vector
+-
 
