@@ -1,4 +1,6 @@
 #include <sstream>
+#include <thread>
+#include <chrono>
 #include "parseOutput.h"
 using namespace std;
 using path = std::filesystem::path;
@@ -12,6 +14,7 @@ void checkOutput(string& command, string& status, int &token, string& message, s
 	currentfile << "Player" << checkcount << ".out";
 	cout << endl<<currentfile.str()<<endl<<endl;	
 
+	this_thread::sleep_for(chrono::milliseconds(100));
 	ifstream input(output_directory / currentfile.str());
 	getline(input, command);
 	//cout << command<<endl;

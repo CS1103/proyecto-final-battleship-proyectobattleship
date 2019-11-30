@@ -3,7 +3,7 @@
 #include"handshakephase.h"
 #include "attackphase.h"
 #include<filesystem>
-#include "placefleet.h"
+//#include "placefleet.h"
 using namespace std;
 
 using path = std::filesystem::path;
@@ -19,7 +19,7 @@ int main() {
 
 	//pre-setup
 	game_setup(user, username, input_directory, output_directory, temp_directory);
-	cout << "GAME SETTINGS"<< username << endl<<input_directory << endl<<output_directory << endl<<temp_directory<<endl;
+	cout << "GAME SETTINGS"<<endl << username << endl << input_directory << endl << output_directory << endl << temp_directory << endl;
 	
 	//program begins
 	//handshake 

@@ -2,8 +2,7 @@
 #include "checkOutputs.h"
 #include "parseScope.h"
 #include <exception>
-#include <thread>
-#include <chrono>
+
 
 using path = std::filesystem::path;
 using namespace std;
@@ -16,7 +15,7 @@ void handshake(int& token, int& ScopeX, int& ScopeY, string& user, string& usern
 
 	//step2: wait and check output
 	//_sleep(100.5);
-	this_thread::sleep_for(chrono::milliseconds(100));
+	
 	
 	checkOutput(command, status, token, scope, user, output_directory, checkcount);
 		if (command == "HANDSHAKE" && status == "ACCEPTED") {
