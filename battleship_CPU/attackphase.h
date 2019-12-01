@@ -3,6 +3,8 @@
 #include "storeresult.h"
 #include "validateattack.h"
 #include "quickinout.h"
+#include "inbounds.h"
+#include "snake.h"
 
 //#include "sendCommands.h"
 #include <vector>
@@ -48,22 +50,22 @@ void attackuntilend(int& token, int& ScopeX, int& ScopeY, string& user, path& in
 				searchingphase--;
 				// switch phases
 				switch (searchingphase) {
-				case 3:
+				case 3: // right
 					attackX = bufferx[1].first;
 					attackY = bufferx[1].second;
 					bufferx.pop_back();
 					break;
-				case 2:
+				case 2: // left
 					attackX = bufferx[0].first;
 					attackY = bufferx[0].second;
 					bufferx.pop_back();
 					break;
-				case 1:
+				case 1: // up
 					attackX = buffery[1].first;
 					attackY = buffery[1].second;
 					buffery.pop_back();
 					break;
-				case 0:
+				case 0: // down
 					attackX = buffery[0].first;
 					attackY = buffery[0].second;
 					buffery.pop_back();
@@ -73,7 +75,7 @@ void attackuntilend(int& token, int& ScopeX, int& ScopeY, string& user, path& in
 				
 				// check if valid
 				// check single and if valid send coordinates to server
-			} while (validateattack(attackX, attackY, attackmemory) != true && searchingphase != 0);
+			} while (~(inbounds(attackX, attackY, currentScopeX, currentScopeY)) & validateattack(attackX, attackY, attackmemory) & searchingphase != 0);
 
 			if (searchingphase != 0) {
 				// send coordinates if valid state
@@ -82,24 +84,24 @@ void attackuntilend(int& token, int& ScopeX, int& ScopeY, string& user, path& in
 				// try path
 				if (message == "DAMAGED") {
 					if (searchingphase == 3) { // try to the right
-						attackX += 1;
-						quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
+						snakeX(attackX, attackY, 1, currentScopeX, currentScopeY, attackmemory, token, input_directory,
+							output_directory, temp_directory, command, status, message, user, checkcount, searchingphase);
 					}
-					if (searchingphase == 2) { // try to the left
-						attackX -= 1;
-						quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
+					else if (searchingphase == 2) { // try to the left
+						snakeX(attackX, attackY, -1, currentScopeX, currentScopeY, attackmemory, token, input_directory,
+							output_directory, temp_directory, command, status, message, user, checkcount, searchingphase);
 					}
-					if (searchingphase == 1) { // try up
-						attackY += 1;
-						quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
+					else if (searchingphase == 1) { // try up
+						snakeY(attackX, attackY, 1, currentScopeX, currentScopeY, attackmemory, token, input_directory,
+							output_directory, temp_directory, command, status, message, user, checkcount, searchingphase);
 					}
-					if (searchingphase == 0) { // try down
-						attackY -= 1;
-						quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
+					else if (searchingphase == 0) { // try down
+						snakeY(attackX, attackY, -1, currentScopeX, currentScopeY, attackmemory, token, input_directory,
+							output_directory, temp_directory, command, status, message, user, checkcount, searchingphase);
 					}
+					//searchingphase++;
 				}
-
-
+				//else searchingphase = 0;
 			}//else message = "" (?)
 
 		}
@@ -112,17 +114,12 @@ void attackuntilend(int& token, int& ScopeX, int& ScopeY, string& user, path& in
 				attackX = randX(gen);
 				attackY = randY(gen);
 			} while (validateattack(attackX, attackY, attackmemory) != true);
-			// format coordinates in CHAR-INT format
-			string formattedcoordinates = formatcoordinates(attackX, attackY);
-
-			// send coordinates
-			sendCommand(token, "ATTACK", formattedcoordinates, input_directory, temp_directory);
-
-			// read response
-			checkOutput(command, status, token, message, user, output_directory, checkcount);
+			quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
 		}
 
 		//loop until game ends
-	} while (message != "GAMEOVER" || message != "WINNER");
-
+	} while (message != "WINNER" && message !="GAMEOVER");
+	
+	if (message == "WINNER")	exit(1);
+	else exit(0);
 }

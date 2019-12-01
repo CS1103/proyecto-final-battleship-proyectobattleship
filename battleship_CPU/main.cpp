@@ -30,7 +30,6 @@ int main() {
 	//placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY);
 
 	//when placefleet completes, proceed to attack phase until win, loss or tie
-
 	attackuntilend(token, ScopeX, ScopeY, user, input_directory, output_directory, temp_directory, checkcount);
 
 
