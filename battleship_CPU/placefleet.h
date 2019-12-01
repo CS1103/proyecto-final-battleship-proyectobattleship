@@ -86,7 +86,7 @@ void coords(){
 }
 
 
-void placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY){
+void placefleet(token, input_directory, temp_directory, output_directory, x, y){
 
     clear();
     shipSize();
