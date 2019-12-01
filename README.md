@@ -10,4 +10,4 @@ Integrantes:
 Asegurarse de configurar correctamente el archivo game_settings.txt especificando el nombre de la CPU, la asignación de jugador y el directorio de la carpeta ROOT del servidor.
 
 # Video Explicativo del Código:
-https://www.youtube.com/watch?v=sOU3Acicruo
+https://youtu.be/V6Cf7XBjsis
