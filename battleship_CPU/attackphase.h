@@ -3,7 +3,6 @@
 #include "storeresult.h"
 #include "validateattack.h"
 #include "quickinout.h"
-#include "inbounds.h"
 
 //#include "sendCommands.h"
 #include <vector>
@@ -74,10 +73,7 @@ void attackuntilend(int& token, int& ScopeX, int& ScopeY, string& user, path& in
 				
 				// check if valid
 				// check single and if valid send coordinates to server
-				int i = 10;
-				int j = 8;
-				bool stts = inbounds(i, j, currentScopeX, currentScopeY);
-			} while (inbounds(attackX, attackY, currentScopeX, currentScopeY) == false && validateattack(attackX, attackY, attackmemory) == false && searchingphase != 0);
+			} while (validateattack(attackX, attackY, attackmemory) != true && searchingphase != 0);
 
 			if (searchingphase != 0) {
 				// send coordinates if valid state
@@ -86,10 +82,8 @@ void attackuntilend(int& token, int& ScopeX, int& ScopeY, string& user, path& in
 				// try path
 				if (message == "DAMAGED") {
 					if (searchingphase == 3) { // try to the right
-						do {
-							attackX += 1;
-							quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
-						} while (message == "DAMAGED");
+						attackX += 1;
+						quickinout(attackX, attackY, token, "ATTACK", input_directory, output_directory, temp_directory, command, status, message, user, checkcount);
 					}
 					if (searchingphase == 2) { // try to the left
 						attackX -= 1;
