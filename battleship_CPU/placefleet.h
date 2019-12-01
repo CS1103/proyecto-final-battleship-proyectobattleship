@@ -82,7 +82,7 @@ void coords(){
             exit(1);
         }
     }
-    cout << "Accepted" << endl;
+    //message: Accepted
 }
 
 
@@ -99,6 +99,7 @@ void placefleet(token, input_directory, temp_directory, output_directory, ScopeX
     }
 
 
+   
 
 
 
