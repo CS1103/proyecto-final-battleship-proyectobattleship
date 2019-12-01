@@ -1,107 +1,87 @@
-#ifndef BATTLESHIP_CPU_PLACEFLEET_H
-#define BATTLESHIP_CPU_PLACEFLEET_H
-
-#include "IncludeHeaders.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <filesystem>
+#include <random>
+#include <vector>
 #include "sendCommands.h"
 
+using namespace std;
 
-char tipoNave;
-int scopex; int scopey;
-int tam, cant;
-char orientacion;
-
-const int fil = 10;
-const int col = 10;
-const int bound = 0;
-char board [fil][col];
-
-void clear(){
-    for (auto & i : board){
-        for (int & j : i){
-            j = 0;
-        }
-    }
+// functions
+void clear(char &board) {
+	for (auto& i : board) {
+		for (int& j : i) {
+			j = 0;
+		}
+	}
 }
 
-void show(){
-    for (auto & i : board){
-        for (int & j : i){
-            cout << j << "   ";
-        }
-        cout << endl;
-    }
-}
+void shipSize(char &tipoNave, int &tam) {
+	//metodo lectura, lee la primera letra 
 
-int shipSize(){
+	if (tipoNave != 'A' && tipoNave != 'B' && tipoNave != 'S' && tipoNave != 'T') {
+		cout << "Not in parameters " << endl;
+		exit(1);
+	}
+	if (tipoNave == 'A') {
+		tam = 4;
+	}
 
-    cout << "Inserte el tipo de nave que deseea: ";
-    cin >> tipoNave;
+	if (tipoNave == 'B') {
+		tam = 3;
+	}
 
-    if (tipoNave != 'A' && tipoNave != 'B' && tipoNave != 'S' && tipoNave != 'T') {
-        cout << "Not in parameters " << endl;
-        exit(1);
-    }
+	if (tipoNave == 'S') {
+		tam = 2;
+	}
 
-    if (tipoNave == 'A') {
-        tam = 4;
-    }
-
-    if (tipoNave == 'B') {
-        tam = 3;
-    }
-
-    if (tipoNave == 'S') {
-        tam = 2;
-    }
-
-    if (tipoNave == 'T') {
-        tam = 1;
-    }
-
-    else cout << "Message: Continue" << endl;
-
-    return tam ;
-}
-
-int shipNumber(){
+	if (tipoNave == 'T') {
+		tam = 1;
+	}
+	// message output: continue
 
 }
 
-void coords(){
-    cout << "Ingrese eje x y eje y: ";
-    cin >> scopex >> scopey;
+void coords(int &placex, int &placey, int &ScopeX, int &ScopeY) {
+	cout << "Ingrese eje x y eje y: ";
+	cin >> placex >> placey;
 
-    if (scopex < bound || scopex > fil){
-        cout << "Out of bounds" << endl;
-        exit (1);
-    }
-    else {
-        if (scopey < bound || scopey > col) {
-            cout << "Out of bounds" << endl;
-            exit(1);
-        }
-    }
-    cout << "Accepted" << endl;
+	if (placex < 0 || placex > ScopeX) {
+		cout << "Out of bounds" << endl;
+		exit(1);
+	}
+
+	else {
+		if (placey < 0 || placey > ScopeY) {
+			cout << "Out of bounds" << endl;
+			exit(1);
+		}
+		// message output: Accepted"
+	}
 }
 
 
-void placefleet(){
 
-    clear();
-    shipSize();
-    coords();
-    cout << "ingrese la orientacion: ";
-    cin >> orientacion;
+void placefleet(int token, path& input_directory, path& temp_directory, path& output_directory, int &ScopeX, int &ScopeY) {
+	const int bound = 0;
+	char tipoNave;
+	int scopex, scopey;
+	int tam, cant;
+	char orientacion;
+	int placex, placey;
 
-    if(orientacion != 'H' && orientacion != 'V'){
-        cout << "Not a valid orientation" << endl;
-        exit (1);
-    }
+	char board[10][10];
 
+	clear(board);
+	shipSize(tipoNave, tam);
+	coords(placex, placey, ScopeX, ScopeY);
 
-
-
-
+	// metodo lecrura de orientación
+	if (orientacion != 'H' && orientacion != 'V') {
+		//message output: Not a valid orientation 
+		exit(1);
+	}
 }
 
-#endif //BATTLESHIP_CPU_PLACEFLEET_H
+
