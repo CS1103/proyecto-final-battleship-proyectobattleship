@@ -38,7 +38,7 @@ int shipSize(){
     cin >> tipoNave;
 
     if (tipoNave != 'A' && tipoNave != 'B' && tipoNave != 'S' && tipoNave != 'T') {
-        cout << "Not in parameters " << endl;
+        //message: Not in parameters
         exit(1);
     }
 
@@ -58,7 +58,8 @@ int shipSize(){
         tam = 1;
     }
 
-    else cout << "Message: Continue" << endl;
+    else 
+        // Message: Continue
 
     return tam ;
 }
@@ -72,12 +73,12 @@ void coords(){
     cin >> scopex >> scopey;
 
     if (scopex < bound || scopex > fil){
-        cout << "Out of bounds" << endl;
+        //output message: out of bounds;
         exit (1);
     }
     else {
         if (scopey < bound || scopey > col) {
-            cout << "Out of bounds" << endl;
+            //output message: out of bounds;
             exit(1);
         }
     }
@@ -85,16 +86,15 @@ void coords(){
 }
 
 
-void placefleet(){
+void placefleet(token, input_directory, temp_directory, output_directory, ScopeX, ScopeY){
 
     clear();
     shipSize();
     coords();
-    cout << "ingrese la orientacion: ";
-    cin >> orientacion;
-
+    //output message
+    
     if(orientacion != 'H' && orientacion != 'V'){
-        cout << "Not a valid orientation" << endl;
+       //messgae: Not a valid orientation"
         exit (1);
     }
 
